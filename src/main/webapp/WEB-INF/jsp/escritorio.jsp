@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,7 +11,7 @@
 <script src="webjars/jquery/1.9.1/jquery.min.js""></script>
 <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js""></script>
 
-<title>Lapshop</title>
+<title>Escritorio</title>
 </head>
 <body>
 	<div class="container">
@@ -25,7 +26,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span>
 				</button>
 
-				<img height="40px" src="images/ls.jpg">
+				<!-- <img src="img/eee_logo.png"> -->
 			</div>
 
 			<div class="collapse navbar-collapse" id="menu">
@@ -37,8 +38,8 @@
 							EQUIPOS <span class="caret"></span>
 					</a>
 						<ul class="dropdown-menu">
-							<li><a href="escritorio.html"> ESCRITORIO </a></li>
-							<li><a href="portatil.html"> PORTATILES </a></li>
+							<li><a href="jsp/escritorio.jsp"> ESCRITORIO </a></li>
+							<li><a href="jsp/portatiles.jsp"> PORTATILES </a></li>
 						</ul></li>
 
 					<li class="active"><a href="seleccionar_publicacion.php">INICIO</a></li>
@@ -66,5 +67,60 @@
 		</nav> </header>
 	</div>
 	<h2>Hola Mundo</h2>
+
+
+	<center>
+
+		<div>
+
+			<form:form commandName="escritorio">
+				<table>
+					<tr>
+						<td>
+							<img height="160px" src="images/imacdesk.jpg">
+						</td>
+						<td>
+							<form:checkbox path="escritorio" value="I Mac"/>I Mac
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img height="160px" src="images/hpdesk.jpg">
+						</td>
+						<td>
+							<form:checkbox path="escritorio" value="HP"/>HP
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img height="160px" src="images/sonydesk.png">
+						</td>
+						<td>
+							<form:checkbox path="escritorio" value="Sony Vaio"/>Sony Vaio
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img height="160px" src="images/delldesk.jpg">
+						</td>
+						<td>
+							<form:checkbox path="escritorio" value="Dell"/>Dell
+						</td>
+					</tr>
+					
+					<tr>
+						<td></td>
+						<td>
+							<input type="submit" value="Realizar Compra">
+						</td>
+					</tr>
+				</table>
+			</form:form>
+		</div>
+
+	</center>
 </body>
 </html>
